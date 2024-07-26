@@ -7,6 +7,9 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
+// touch db.sqlite
+// sqlite3 db.sqlite
+
 type ProductDb struct {
 	db *sql.DB
 }

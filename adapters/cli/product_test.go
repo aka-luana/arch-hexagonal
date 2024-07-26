@@ -30,7 +30,7 @@ func TestRun(t *testing.T) {
 	serviceMock.EXPECT().Enable(gomock.Any()).Return(productMock, nil).AnyTimes()
 	serviceMock.EXPECT().Disable(gomock.Any()).Return(productMock, nil).AnyTimes()
 
-	resultExpected := fmt.Sprintf("Product ID %s with name %s has been creates with price %f and status %s",
+	resultExpected := fmt.Sprintf("Product ID %s with name %s has been created with price %f and status %s",
 		productID, productName, productPrice, productStatus)
 	result, err := cli.Run(serviceMock, "create", "", productName, productPrice)
 	require.Nil(t, err)
